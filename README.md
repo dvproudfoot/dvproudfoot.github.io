@@ -1,37 +1,68 @@
-## Welcome to GitHub Pages
+define(['pipAPI', 'https://cdn.jsdelivr.net/gh/baranan/minno-tasks@0.*/stiat/qualtrics/qstiat6.js'], function(APIConstructor, stiatExtension){
+	
+	var API = new APIConstructor();
+		  return stiatExtension({
+		  category : { 
+		    name : 'Black people', //Will appear in the data.
+		    title : {
+		      media : {word : 'Black people'}, //Name of the category presented in the task.
+		      css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
+		      height : 7 //Used to position the "Or" in the combined block.
+		    }, 
+		    media : [ //Stimuli content as PIP's media objects
+    		    	{image : 'black1.jpg'}, 
+    			{image : 'black2.jpg'}, 
+    			{image : 'black3.jpg'}, 
+    			{image : 'black4.jpg'}, 
+    			{image : 'black5.jpg'}, 
+    			{image : 'black6.jpg'}
+		    ], 
+		    //Stimulus css (style)
+		    css : {color:'#31b404','font-size':'3em'}
+		  },	
 
-You can use the [editor on GitHub](https://github.com/dvproudfoot/dvproudfoot.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+  		attribute1 : 
+			{
+			name : 'Unpleasant', //Attribute label
+			title : {
+				media : {word : 'Negative'}, //Name of the category presented in the task.
+				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
+				height : 7 //Used to position the "Or" in the combined block.
+			}, 
+			media : [ //Stimuli
+				{word: 'Bomb'},
+				{word: 'Abuse'},
+				{word: 'Sadness'},
+				{word: 'Pain'},
+				{word: 'Poison'},
+				{word: 'Grief'}
+			], 
+			//Can change color and size of the targets here.
+			css : {color:'#31b404','font-size':'3em'}
+			},
+		attribute2 : 
+			{
+			name : 'Pleasant', //Attribute label
+			title : {
+				media : {word : 'Positive'}, //Name of the category presented in the task.
+				css : {color:'#31b404','font-size':'2em'}, //Style of the category title.
+				height : 7 //Used to position the "Or" in the combined block.
+			}, 
+			media : [ //Stimuli
+				{word: 'Paradise'},
+				{word: 'Pleasure'},
+				{word: 'Cheer'},
+				{word: 'Wonderful'},
+				{word: 'Splendid'},
+				{word: 'Love'}
+			], 
+			//Can change color and size of the targets here.
+			css : {color:'#31b404','font-size':'3em'}
+			},
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  base_url : {//Where are your images at?
+    image : 'https://baranan.github.io/minno-tasks/images/'
+  }}
+  );
+  });
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/dvproudfoot/dvproudfoot.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
